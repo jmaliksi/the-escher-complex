@@ -6153,7 +6153,7 @@ module.exports = module.exports = {
     },
     "option.pizza.7.1.0.4": {
         "type": "call",
-        "label": "eat",
+        "label": "eat.za",
         "args": [],
         "next": "RET",
         "branch": "ESC",
@@ -6263,7 +6263,7 @@ module.exports = module.exports = {
     },
     "option.pizza.7.1.1.4": {
         "type": "call",
-        "label": "eat",
+        "label": "eat.za",
         "args": [],
         "next": "RET",
         "branch": "ESC",
@@ -6373,7 +6373,7 @@ module.exports = module.exports = {
     },
     "option.pizza.7.1.2.4": {
         "type": "call",
-        "label": "eat",
+        "label": "eat.za",
         "args": [],
         "next": "RET",
         "branch": "ESC",
@@ -6770,34 +6770,29 @@ module.exports = module.exports = {
         "next": "RET",
         "position": "snackroom.kni:151:5"
     },
-    "eat": {
+    "eat.za": {
         "type": "def",
         "locals": [],
-        "next": "eat.1",
-        "position": "snackroom.kni:191:5"
+        "next": "eat.za.1",
+        "position": "snackroom.kni:153:5"
     },
-    "eat.1": {
+    "eat.za.1": {
         "type": "switch",
         "expression": [
             "get",
-            "eat.1"
+            "eat.za.1"
         ],
-        "variable": "eat.1",
+        "variable": "eat.za.1",
         "value": 0,
         "mode": "rand",
         "branches": [
-            "eat.1.1",
-            "eat.1.2",
-            "eat.1.3",
-            "eat.1.4",
-            "eat.1.5",
-            "eat.1.6"
+            "eat.za.1.1",
+            "eat.za.1.2",
+            "eat.za.1.3",
+            "eat.za.1.4",
+            "eat.za.1.5"
         ],
         "weights": [
-            [
-                "val",
-                1
-            ],
             [
                 "val",
                 1
@@ -6820,47 +6815,47 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:193:5"
+        "position": "snackroom.kni:155:5"
     },
-    "eat.1.1": {
+    "eat.za.1.1": {
         "type": "text",
-        "text": "Cronch.",
+        "text": "It's fine.",
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:194:5"
+        "position": "snackroom.kni:156:5"
     },
-    "eat.1.2": {
+    "eat.za.1.2": {
         "type": "text",
-        "text": "You feel healthy.",
+        "text": "You burn the roof of your mouth.",
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:195:5"
+        "position": "snackroom.kni:157:5"
     },
-    "eat.1.3": {
+    "eat.za.1.3": {
         "type": "text",
-        "text": "You feel great.",
+        "text": "This is the singular best pizza you've ever had.",
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:196:5"
+        "position": "snackroom.kni:158:5"
     },
-    "eat.1.4": {
+    "eat.za.1.4": {
         "type": "text",
-        "text": "You feel like a bird.",
+        "text": "Tasty!",
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:197:5"
+        "position": "snackroom.kni:159:5"
     },
-    "eat.1.5": {
+    "eat.za.1.5": {
         "type": "text",
-        "text": "Cromch.",
+        "text": "Your favorite!",
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:198:5"
+        "position": "snackroom.kni:160:5"
     },
     "option.dippindots": {
         "type": "def",
@@ -8207,6 +8202,98 @@ module.exports = module.exports = {
         "type": "goto",
         "next": "RET",
         "position": "snackroom.kni:189:3"
+    },
+    "eat": {
+        "type": "def",
+        "locals": [],
+        "next": "eat.1",
+        "position": "snackroom.kni:191:5"
+    },
+    "eat.1": {
+        "type": "switch",
+        "expression": [
+            "get",
+            "eat.1"
+        ],
+        "variable": "eat.1",
+        "value": 0,
+        "mode": "rand",
+        "branches": [
+            "eat.1.1",
+            "eat.1.2",
+            "eat.1.3",
+            "eat.1.4",
+            "eat.1.5",
+            "eat.1.6"
+        ],
+        "weights": [
+            [
+                "val",
+                1
+            ],
+            [
+                "val",
+                1
+            ],
+            [
+                "val",
+                1
+            ],
+            [
+                "val",
+                1
+            ],
+            [
+                "val",
+                1
+            ],
+            [
+                "val",
+                1
+            ]
+        ],
+        "next": "RET",
+        "position": "snackroom.kni:193:5"
+    },
+    "eat.1.1": {
+        "type": "text",
+        "text": "Cronch.",
+        "lift": "",
+        "drop": " ",
+        "next": "RET",
+        "position": "snackroom.kni:194:5"
+    },
+    "eat.1.2": {
+        "type": "text",
+        "text": "You feel healthy.",
+        "lift": "",
+        "drop": " ",
+        "next": "RET",
+        "position": "snackroom.kni:195:5"
+    },
+    "eat.1.3": {
+        "type": "text",
+        "text": "You feel great.",
+        "lift": "",
+        "drop": " ",
+        "next": "RET",
+        "position": "snackroom.kni:196:5"
+    },
+    "eat.1.4": {
+        "type": "text",
+        "text": "You feel like a bird.",
+        "lift": "",
+        "drop": " ",
+        "next": "RET",
+        "position": "snackroom.kni:197:5"
+    },
+    "eat.1.5": {
+        "type": "text",
+        "text": "Cromch.",
+        "lift": "",
+        "drop": " ",
+        "next": "RET",
+        "position": "snackroom.kni:198:5"
     },
     "eat.1.6": {
         "type": "text",

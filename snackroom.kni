@@ -122,9 +122,9 @@
   pizza. //
   ->show.money(currency)
   {(currency.{currency})?
-    + [You order a personal []->make.pizza(seed.sauce, seed.style, seed.topping)] {-currency.{currency}} ->eat()
-    + [You order a personal []->make.pizza(seed.sauce + 1, seed.style + 1, seed.topping + 1)] {-currency.{currency}} ->eat()
-    + [You order a personal []->make.pizza(seed.sauce + 2, seed.style + 2, seed.topping + 2)] {-currency.{currency}} ->eat()
+    + [You order a personal []->make.pizza(seed.sauce, seed.style, seed.topping)] {-currency.{currency}} ->eat.za()
+    + [You order a personal []->make.pizza(seed.sauce + 1, seed.style + 1, seed.topping + 1)] {-currency.{currency}} ->eat.za()
+    + [You order a personal []->make.pizza(seed.sauce + 2, seed.style + 2, seed.topping + 2)] {-currency.{currency}} ->eat.za()
   }
 
   - @make.pizza(sc, st, tp)
@@ -150,7 +150,7 @@
     |, topped with beans.
     }
 
-  - @eat()
+  - @eat.za()
     {
     ~It's fine.
     |You burn the roof of your mouth.
