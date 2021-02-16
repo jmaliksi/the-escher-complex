@@ -128,7 +128,7 @@
   }
 
   - @make.pizza(sc, st, tp)
-    {#sc|Detroit|Chicago|New York} style pizza with {#st|red sauce|white sauce|pesto} ->topping(tp)
+    {#sc|Detroit|Chicago|New York|Neopolitan} style pizza with {#st|red sauce|white sauce|pesto} ->topping(tp)
 
   - @topping(p)
     {#p
