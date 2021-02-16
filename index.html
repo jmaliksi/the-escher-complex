@@ -3758,9 +3758,14 @@ module.exports = module.exports = {
             "coffee.flavor.5.10",
             "coffee.flavor.5.11",
             "coffee.flavor.5.12",
-            "coffee.flavor.5.13"
+            "coffee.flavor.5.13",
+            "coffee.flavor.5.14"
         ],
         "weights": [
+            [
+                "val",
+                1
+            ],
             [
                 "val",
                 1
@@ -3916,6 +3921,14 @@ module.exports = module.exports = {
     "coffee.flavor.5.13": {
         "type": "text",
         "text": "leather",
+        "lift": "",
+        "drop": "",
+        "next": "coffee.flavor.6",
+        "position": "snackroom.kni:69:5"
+    },
+    "coffee.flavor.5.14": {
+        "type": "text",
+        "text": "almonds",
         "lift": "",
         "drop": "",
         "next": "coffee.flavor.6",
@@ -4244,7 +4257,7 @@ module.exports = module.exports = {
             "option.fanta.4.1.5.4"
         ],
         "keywords": [],
-        "next": "RET",
+        "next": "option.fanta.4.1.6",
         "position": "snackroom.kni:80:7"
     },
     "option.fanta.4.1.5.1": {
@@ -4279,16 +4292,63 @@ module.exports = module.exports = {
         "branch": "ESC",
         "position": "snackroom.kni:80:7"
     },
+    "option.fanta.4.1.6": {
+        "type": "opt",
+        "question": [
+            "option.fanta.4.1.6.2",
+            "option.fanta.4.1.6.3"
+        ],
+        "answer": [
+            "option.fanta.4.1.6.1",
+            "option.fanta.4.1.6.3",
+            "option.fanta.4.1.6.4"
+        ],
+        "keywords": [],
+        "next": "RET",
+        "position": "snackroom.kni:81:7"
+    },
+    "option.fanta.4.1.6.1": {
+        "type": "text",
+        "text": "You purchase an i",
+        "lift": "",
+        "drop": "",
+        "next": "RET",
+        "position": "snackroom.kni:81:7"
+    },
+    "option.fanta.4.1.6.2": {
+        "type": "text",
+        "text": "I",
+        "lift": "",
+        "drop": "",
+        "next": "RET",
+        "position": "snackroom.kni:81:7"
+    },
+    "option.fanta.4.1.6.3": {
+        "type": "text",
+        "text": "ndigo Fanta.",
+        "lift": "",
+        "drop": "",
+        "next": "RET",
+        "position": "snackroom.kni:81:7"
+    },
+    "option.fanta.4.1.6.4": {
+        "type": "call",
+        "label": "fanta.flavor",
+        "args": [],
+        "next": "RET",
+        "branch": "ESC",
+        "position": "snackroom.kni:81:7"
+    },
     "option.fanta.4.2": {
         "type": "goto",
         "next": "RET",
-        "position": "snackroom.kni:81:3"
+        "position": "snackroom.kni:82:3"
     },
     "fanta.flavor": {
         "type": "def",
         "locals": [],
         "next": "fanta.flavor.1",
-        "position": "snackroom.kni:83:5"
+        "position": "snackroom.kni:84:5"
     },
     "fanta.flavor.1": {
         "type": "move",
@@ -4326,7 +4386,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "fanta.flavor.2",
-        "position": "snackroom.kni:84:5"
+        "position": "snackroom.kni:85:5"
     },
     "fanta.flavor.2": {
         "type": "text",
@@ -4334,7 +4394,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "fanta.flavor.3",
-        "position": "snackroom.kni:85:5"
+        "position": "snackroom.kni:86:5"
     },
     "fanta.flavor.3": {
         "type": "call",
@@ -4342,7 +4402,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "fanta.flavor.4",
         "branch": "ESC",
-        "position": "snackroom.kni:85:5"
+        "position": "snackroom.kni:86:5"
     },
     "fanta.flavor.4": {
         "type": "text",
@@ -4350,7 +4410,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:86:5"
+        "position": "snackroom.kni:87:5"
     },
     "option.bento": {
         "type": "def",
@@ -4358,7 +4418,7 @@ module.exports = module.exports = {
             "currency"
         ],
         "next": "option.bento.1",
-        "position": "snackroom.kni:87:3"
+        "position": "snackroom.kni:88:3"
     },
     "option.bento.1": {
         "type": "move",
@@ -4374,7 +4434,7 @@ module.exports = module.exports = {
             "bento.seed"
         ],
         "next": "option.bento.2",
-        "position": "snackroom.kni:89:3"
+        "position": "snackroom.kni:90:3"
     },
     "option.bento.2": {
         "type": "text",
@@ -4382,12 +4442,12 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.bento.3",
-        "position": "snackroom.kni:89:3"
+        "position": "snackroom.kni:90:3"
     },
     "option.bento.3": {
         "type": "par",
         "next": "option.bento.4",
-        "position": "snackroom.kni:89:3"
+        "position": "snackroom.kni:90:3"
     },
     "option.bento.4": {
         "type": "call",
@@ -4400,7 +4460,7 @@ module.exports = module.exports = {
         ],
         "next": "option.bento.5",
         "branch": "ESC",
-        "position": "snackroom.kni:90:3"
+        "position": "snackroom.kni:91:3"
     },
     "option.bento.5": {
         "type": "switch",
@@ -4434,7 +4494,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:91:3"
+        "position": "snackroom.kni:92:3"
     },
     "option.bento.5.1": {
         "type": "opt",
@@ -4449,7 +4509,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.bento.5.1.1",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.0.1": {
         "type": "text",
@@ -4457,7 +4517,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.0.2": {
         "type": "text",
@@ -4465,7 +4525,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.0.3": {
         "type": "text",
@@ -4473,7 +4533,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.bento.5.1.0.4",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.0.4": {
         "type": "call",
@@ -4493,7 +4553,7 @@ module.exports = module.exports = {
         ],
         "next": "option.bento.5.1.0.5",
         "branch": "ESC",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.0.5": {
         "type": "text",
@@ -4501,7 +4561,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.bento.5.1.0.6",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.0.6": {
         "type": "call",
@@ -4521,7 +4581,7 @@ module.exports = module.exports = {
         ],
         "next": "option.bento.5.1.0.7",
         "branch": "ESC",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.0.7": {
         "type": "text",
@@ -4529,7 +4589,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.0.8": {
         "type": "call",
@@ -4537,7 +4597,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:92:7"
+        "position": "snackroom.kni:93:7"
     },
     "option.bento.5.1.1": {
         "type": "opt",
@@ -4552,7 +4612,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.bento.5.1.2",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.1.1": {
         "type": "text",
@@ -4560,7 +4620,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.1.2": {
         "type": "text",
@@ -4568,7 +4628,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.1.3": {
         "type": "text",
@@ -4576,7 +4636,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.bento.5.1.1.4",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.1.4": {
         "type": "call",
@@ -4596,7 +4656,7 @@ module.exports = module.exports = {
         ],
         "next": "option.bento.5.1.1.5",
         "branch": "ESC",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.1.5": {
         "type": "text",
@@ -4604,7 +4664,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.bento.5.1.1.6",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.1.6": {
         "type": "call",
@@ -4624,7 +4684,7 @@ module.exports = module.exports = {
         ],
         "next": "option.bento.5.1.1.7",
         "branch": "ESC",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.1.7": {
         "type": "text",
@@ -4632,7 +4692,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.1.8": {
         "type": "call",
@@ -4640,7 +4700,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:93:7"
+        "position": "snackroom.kni:94:7"
     },
     "option.bento.5.1.2": {
         "type": "opt",
@@ -4655,7 +4715,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "RET",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.1.2.1": {
         "type": "text",
@@ -4663,7 +4723,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.1.2.2": {
         "type": "text",
@@ -4671,7 +4731,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.1.2.3": {
         "type": "text",
@@ -4679,7 +4739,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.bento.5.1.2.4",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.1.2.4": {
         "type": "call",
@@ -4699,7 +4759,7 @@ module.exports = module.exports = {
         ],
         "next": "option.bento.5.1.2.5",
         "branch": "ESC",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.1.2.5": {
         "type": "text",
@@ -4707,7 +4767,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.bento.5.1.2.6",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.1.2.6": {
         "type": "call",
@@ -4727,7 +4787,7 @@ module.exports = module.exports = {
         ],
         "next": "option.bento.5.1.2.7",
         "branch": "ESC",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.1.2.7": {
         "type": "text",
@@ -4735,7 +4795,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.1.2.8": {
         "type": "call",
@@ -4743,12 +4803,12 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:94:7"
+        "position": "snackroom.kni:95:7"
     },
     "option.bento.5.2": {
         "type": "goto",
         "next": "RET",
-        "position": "snackroom.kni:95:3"
+        "position": "snackroom.kni:96:3"
     },
     "ulam": {
         "type": "def",
@@ -4756,7 +4816,7 @@ module.exports = module.exports = {
             "n"
         ],
         "next": "ulam.1",
-        "position": "snackroom.kni:97:5"
+        "position": "snackroom.kni:98:5"
     },
     "ulam.1": {
         "type": "switch",
@@ -4887,7 +4947,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.1": {
         "type": "text",
@@ -4895,7 +4955,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.2": {
         "type": "text",
@@ -4903,7 +4963,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.3": {
         "type": "text",
@@ -4911,7 +4971,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.4": {
         "type": "text",
@@ -4919,7 +4979,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.5": {
         "type": "text",
@@ -4927,7 +4987,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.6": {
         "type": "text",
@@ -4935,7 +4995,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.7": {
         "type": "text",
@@ -4943,7 +5003,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.8": {
         "type": "text",
@@ -4951,7 +5011,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.9": {
         "type": "text",
@@ -4959,7 +5019,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.10": {
         "type": "text",
@@ -4967,7 +5027,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.11": {
         "type": "text",
@@ -4975,7 +5035,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.12": {
         "type": "text",
@@ -4983,7 +5043,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.13": {
         "type": "text",
@@ -4991,7 +5051,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.14": {
         "type": "text",
@@ -4999,7 +5059,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.15": {
         "type": "text",
@@ -5007,7 +5067,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.16": {
         "type": "text",
@@ -5015,7 +5075,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.17": {
         "type": "text",
@@ -5023,7 +5083,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.18": {
         "type": "text",
@@ -5031,7 +5091,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.19": {
         "type": "text",
@@ -5039,7 +5099,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.20": {
         "type": "text",
@@ -5047,7 +5107,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.21": {
         "type": "text",
@@ -5055,7 +5115,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.22": {
         "type": "text",
@@ -5063,7 +5123,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "ulam.1.23": {
         "type": "text",
@@ -5071,13 +5131,13 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:98:5"
+        "position": "snackroom.kni:99:5"
     },
     "flavor": {
         "type": "def",
         "locals": [],
         "next": "flavor.1",
-        "position": "snackroom.kni:100:5"
+        "position": "snackroom.kni:101:5"
     },
     "flavor.1": {
         "type": "move",
@@ -5115,7 +5175,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "flavor.2",
-        "position": "snackroom.kni:101:5"
+        "position": "snackroom.kni:102:5"
     },
     "flavor.2": {
         "type": "text",
@@ -5123,7 +5183,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "flavor.3",
-        "position": "snackroom.kni:102:5"
+        "position": "snackroom.kni:103:5"
     },
     "flavor.3": {
         "type": "switch",
@@ -5159,7 +5219,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:102:5"
+        "position": "snackroom.kni:103:5"
     },
     "flavor.3.1": {
         "type": "text",
@@ -5167,7 +5227,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "flavor.4",
-        "position": "snackroom.kni:102:5"
+        "position": "snackroom.kni:103:5"
     },
     "flavor.3.2": {
         "type": "text",
@@ -5175,7 +5235,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "flavor.4",
-        "position": "snackroom.kni:102:5"
+        "position": "snackroom.kni:103:5"
     },
     "flavor.3.3": {
         "type": "text",
@@ -5183,7 +5243,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "flavor.4",
-        "position": "snackroom.kni:102:5"
+        "position": "snackroom.kni:103:5"
     },
     "flavor.3.4": {
         "type": "text",
@@ -5191,7 +5251,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "flavor.4",
-        "position": "snackroom.kni:102:5"
+        "position": "snackroom.kni:103:5"
     },
     "flavor.4": {
         "type": "text",
@@ -5199,7 +5259,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:103:5"
+        "position": "snackroom.kni:104:5"
     },
     "option.tea": {
         "type": "def",
@@ -5207,7 +5267,7 @@ module.exports = module.exports = {
             "currency"
         ],
         "next": "option.tea.1",
-        "position": "snackroom.kni:104:3"
+        "position": "snackroom.kni:105:3"
     },
     "option.tea.1": {
         "type": "text",
@@ -5215,12 +5275,12 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.tea.2",
-        "position": "snackroom.kni:105:3"
+        "position": "snackroom.kni:106:3"
     },
     "option.tea.2": {
         "type": "par",
         "next": "option.tea.3",
-        "position": "snackroom.kni:105:3"
+        "position": "snackroom.kni:106:3"
     },
     "option.tea.3": {
         "type": "call",
@@ -5233,7 +5293,7 @@ module.exports = module.exports = {
         ],
         "next": "option.tea.4",
         "branch": "ESC",
-        "position": "snackroom.kni:106:3"
+        "position": "snackroom.kni:107:3"
     },
     "option.tea.4": {
         "type": "switch",
@@ -5267,7 +5327,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:107:3"
+        "position": "snackroom.kni:108:3"
     },
     "option.tea.4.1": {
         "type": "opt",
@@ -5282,7 +5342,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.tea.4.1.1",
-        "position": "snackroom.kni:108:7"
+        "position": "snackroom.kni:109:7"
     },
     "option.tea.4.1.0.1": {
         "type": "text",
@@ -5290,7 +5350,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:108:7"
+        "position": "snackroom.kni:109:7"
     },
     "option.tea.4.1.0.2": {
         "type": "text",
@@ -5298,7 +5358,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:108:7"
+        "position": "snackroom.kni:109:7"
     },
     "option.tea.4.1.0.3": {
         "type": "text",
@@ -5306,7 +5366,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:108:7"
+        "position": "snackroom.kni:109:7"
     },
     "option.tea.4.1.0.4": {
         "type": "move",
@@ -5344,7 +5404,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.tea.4.1.0.5",
-        "position": "snackroom.kni:108:7"
+        "position": "snackroom.kni:109:7"
     },
     "option.tea.4.1.0.5": {
         "type": "text",
@@ -5352,7 +5412,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:109:7"
+        "position": "snackroom.kni:110:7"
     },
     "option.tea.4.1.1": {
         "type": "opt",
@@ -5367,7 +5427,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.tea.4.1.2",
-        "position": "snackroom.kni:109:7"
+        "position": "snackroom.kni:110:7"
     },
     "option.tea.4.1.1.1": {
         "type": "text",
@@ -5375,7 +5435,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:109:7"
+        "position": "snackroom.kni:110:7"
     },
     "option.tea.4.1.1.2": {
         "type": "text",
@@ -5383,7 +5443,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:109:7"
+        "position": "snackroom.kni:110:7"
     },
     "option.tea.4.1.1.3": {
         "type": "text",
@@ -5391,7 +5451,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:109:7"
+        "position": "snackroom.kni:110:7"
     },
     "option.tea.4.1.1.4": {
         "type": "move",
@@ -5429,7 +5489,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.tea.4.1.1.5",
-        "position": "snackroom.kni:109:7"
+        "position": "snackroom.kni:110:7"
     },
     "option.tea.4.1.1.5": {
         "type": "text",
@@ -5437,7 +5497,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:110:7"
+        "position": "snackroom.kni:111:7"
     },
     "option.tea.4.1.2": {
         "type": "opt",
@@ -5452,7 +5512,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.tea.4.1.3",
-        "position": "snackroom.kni:110:7"
+        "position": "snackroom.kni:111:7"
     },
     "option.tea.4.1.2.1": {
         "type": "text",
@@ -5460,7 +5520,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:110:7"
+        "position": "snackroom.kni:111:7"
     },
     "option.tea.4.1.2.2": {
         "type": "text",
@@ -5468,7 +5528,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:110:7"
+        "position": "snackroom.kni:111:7"
     },
     "option.tea.4.1.2.3": {
         "type": "text",
@@ -5476,7 +5536,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:110:7"
+        "position": "snackroom.kni:111:7"
     },
     "option.tea.4.1.2.4": {
         "type": "move",
@@ -5514,7 +5574,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.tea.4.1.2.5",
-        "position": "snackroom.kni:110:7"
+        "position": "snackroom.kni:111:7"
     },
     "option.tea.4.1.2.5": {
         "type": "text",
@@ -5522,7 +5582,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:111:7"
+        "position": "snackroom.kni:112:7"
     },
     "option.tea.4.1.3": {
         "type": "opt",
@@ -5537,7 +5597,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.tea.4.1.4",
-        "position": "snackroom.kni:111:7"
+        "position": "snackroom.kni:112:7"
     },
     "option.tea.4.1.3.1": {
         "type": "text",
@@ -5545,7 +5605,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:111:7"
+        "position": "snackroom.kni:112:7"
     },
     "option.tea.4.1.3.2": {
         "type": "text",
@@ -5553,7 +5613,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:111:7"
+        "position": "snackroom.kni:112:7"
     },
     "option.tea.4.1.3.3": {
         "type": "text",
@@ -5561,7 +5621,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:111:7"
+        "position": "snackroom.kni:112:7"
     },
     "option.tea.4.1.3.4": {
         "type": "move",
@@ -5599,7 +5659,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.tea.4.1.3.5",
-        "position": "snackroom.kni:111:7"
+        "position": "snackroom.kni:112:7"
     },
     "option.tea.4.1.3.5": {
         "type": "text",
@@ -5607,7 +5667,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:112:7"
+        "position": "snackroom.kni:113:7"
     },
     "option.tea.4.1.4": {
         "type": "opt",
@@ -5622,7 +5682,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.tea.4.1.5",
-        "position": "snackroom.kni:112:7"
+        "position": "snackroom.kni:113:7"
     },
     "option.tea.4.1.4.1": {
         "type": "text",
@@ -5630,7 +5690,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:112:7"
+        "position": "snackroom.kni:113:7"
     },
     "option.tea.4.1.4.2": {
         "type": "text",
@@ -5638,7 +5698,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:112:7"
+        "position": "snackroom.kni:113:7"
     },
     "option.tea.4.1.4.3": {
         "type": "text",
@@ -5646,7 +5706,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:112:7"
+        "position": "snackroom.kni:113:7"
     },
     "option.tea.4.1.4.4": {
         "type": "move",
@@ -5684,7 +5744,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.tea.4.1.4.5",
-        "position": "snackroom.kni:112:7"
+        "position": "snackroom.kni:113:7"
     },
     "option.tea.4.1.4.5": {
         "type": "text",
@@ -5692,7 +5752,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:113:7"
+        "position": "snackroom.kni:114:7"
     },
     "option.tea.4.1.5": {
         "type": "opt",
@@ -5707,7 +5767,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.tea.4.1.6",
-        "position": "snackroom.kni:113:7"
+        "position": "snackroom.kni:114:7"
     },
     "option.tea.4.1.5.1": {
         "type": "text",
@@ -5715,7 +5775,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:113:7"
+        "position": "snackroom.kni:114:7"
     },
     "option.tea.4.1.5.2": {
         "type": "text",
@@ -5723,7 +5783,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:113:7"
+        "position": "snackroom.kni:114:7"
     },
     "option.tea.4.1.5.3": {
         "type": "text",
@@ -5731,7 +5791,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:113:7"
+        "position": "snackroom.kni:114:7"
     },
     "option.tea.4.1.5.4": {
         "type": "move",
@@ -5769,7 +5829,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.tea.4.1.5.5",
-        "position": "snackroom.kni:113:7"
+        "position": "snackroom.kni:114:7"
     },
     "option.tea.4.1.5.5": {
         "type": "text",
@@ -5777,7 +5837,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:114:7"
+        "position": "snackroom.kni:115:7"
     },
     "option.tea.4.1.6": {
         "type": "opt",
@@ -5792,7 +5852,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.tea.4.1.7",
-        "position": "snackroom.kni:114:7"
+        "position": "snackroom.kni:115:7"
     },
     "option.tea.4.1.6.1": {
         "type": "text",
@@ -5800,7 +5860,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:114:7"
+        "position": "snackroom.kni:115:7"
     },
     "option.tea.4.1.6.2": {
         "type": "text",
@@ -5808,7 +5868,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:114:7"
+        "position": "snackroom.kni:115:7"
     },
     "option.tea.4.1.6.3": {
         "type": "text",
@@ -5816,7 +5876,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:114:7"
+        "position": "snackroom.kni:115:7"
     },
     "option.tea.4.1.6.4": {
         "type": "move",
@@ -5854,7 +5914,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.tea.4.1.6.5",
-        "position": "snackroom.kni:114:7"
+        "position": "snackroom.kni:115:7"
     },
     "option.tea.4.1.6.5": {
         "type": "text",
@@ -5862,7 +5922,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:115:7"
+        "position": "snackroom.kni:116:7"
     },
     "option.tea.4.1.7": {
         "type": "opt",
@@ -5877,7 +5937,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "RET",
-        "position": "snackroom.kni:115:7"
+        "position": "snackroom.kni:116:7"
     },
     "option.tea.4.1.7.1": {
         "type": "text",
@@ -5885,7 +5945,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:115:7"
+        "position": "snackroom.kni:116:7"
     },
     "option.tea.4.1.7.2": {
         "type": "text",
@@ -5893,7 +5953,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:115:7"
+        "position": "snackroom.kni:116:7"
     },
     "option.tea.4.1.7.3": {
         "type": "text",
@@ -5901,7 +5961,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:115:7"
+        "position": "snackroom.kni:116:7"
     },
     "option.tea.4.1.7.4": {
         "type": "move",
@@ -5939,7 +5999,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.tea.4.1.7.5",
-        "position": "snackroom.kni:115:7"
+        "position": "snackroom.kni:116:7"
     },
     "option.tea.4.1.7.5": {
         "type": "text",
@@ -5947,12 +6007,12 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:116:3"
+        "position": "snackroom.kni:117:3"
     },
     "option.tea.4.2": {
         "type": "goto",
         "next": "RET",
-        "position": "snackroom.kni:116:3"
+        "position": "snackroom.kni:117:3"
     },
     "option.pizza": {
         "type": "def",
@@ -5960,7 +6020,7 @@ module.exports = module.exports = {
             "currency"
         ],
         "next": "option.pizza.1",
-        "position": "snackroom.kni:118:3"
+        "position": "snackroom.kni:119:3"
     },
     "option.pizza.1": {
         "type": "move",
@@ -5976,7 +6036,7 @@ module.exports = module.exports = {
             "seed.sauce"
         ],
         "next": "option.pizza.2",
-        "position": "snackroom.kni:120:5"
+        "position": "snackroom.kni:121:5"
     },
     "option.pizza.2": {
         "type": "move",
@@ -5992,7 +6052,7 @@ module.exports = module.exports = {
             "seed.style"
         ],
         "next": "option.pizza.3",
-        "position": "snackroom.kni:121:5"
+        "position": "snackroom.kni:122:5"
     },
     "option.pizza.3": {
         "type": "move",
@@ -6008,7 +6068,7 @@ module.exports = module.exports = {
             "seed.topping"
         ],
         "next": "option.pizza.4",
-        "position": "snackroom.kni:122:3"
+        "position": "snackroom.kni:123:3"
     },
     "option.pizza.4": {
         "type": "text",
@@ -6016,12 +6076,12 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.pizza.5",
-        "position": "snackroom.kni:122:3"
+        "position": "snackroom.kni:123:3"
     },
     "option.pizza.5": {
         "type": "par",
         "next": "option.pizza.6",
-        "position": "snackroom.kni:122:3"
+        "position": "snackroom.kni:123:3"
     },
     "option.pizza.6": {
         "type": "call",
@@ -6034,7 +6094,7 @@ module.exports = module.exports = {
         ],
         "next": "option.pizza.7",
         "branch": "ESC",
-        "position": "snackroom.kni:123:3"
+        "position": "snackroom.kni:124:3"
     },
     "option.pizza.7": {
         "type": "switch",
@@ -6068,7 +6128,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:124:3"
+        "position": "snackroom.kni:125:3"
     },
     "option.pizza.7.1": {
         "type": "opt",
@@ -6082,7 +6142,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.pizza.7.1.1",
-        "position": "snackroom.kni:125:7"
+        "position": "snackroom.kni:126:7"
     },
     "option.pizza.7.1.0.1": {
         "type": "text",
@@ -6090,7 +6150,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:125:7"
+        "position": "snackroom.kni:126:7"
     },
     "option.pizza.7.1.0.2": {
         "type": "call",
@@ -6111,7 +6171,7 @@ module.exports = module.exports = {
         ],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:125:7"
+        "position": "snackroom.kni:126:7"
     },
     "option.pizza.7.1.0.3": {
         "type": "move",
@@ -6149,7 +6209,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.pizza.7.1.0.4",
-        "position": "snackroom.kni:125:7"
+        "position": "snackroom.kni:126:7"
     },
     "option.pizza.7.1.0.4": {
         "type": "call",
@@ -6157,7 +6217,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:125:7"
+        "position": "snackroom.kni:126:7"
     },
     "option.pizza.7.1.1": {
         "type": "opt",
@@ -6171,7 +6231,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.pizza.7.1.2",
-        "position": "snackroom.kni:126:7"
+        "position": "snackroom.kni:127:7"
     },
     "option.pizza.7.1.1.1": {
         "type": "text",
@@ -6179,7 +6239,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:126:7"
+        "position": "snackroom.kni:127:7"
     },
     "option.pizza.7.1.1.2": {
         "type": "call",
@@ -6221,7 +6281,7 @@ module.exports = module.exports = {
         ],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:126:7"
+        "position": "snackroom.kni:127:7"
     },
     "option.pizza.7.1.1.3": {
         "type": "move",
@@ -6259,7 +6319,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.pizza.7.1.1.4",
-        "position": "snackroom.kni:126:7"
+        "position": "snackroom.kni:127:7"
     },
     "option.pizza.7.1.1.4": {
         "type": "call",
@@ -6267,7 +6327,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:126:7"
+        "position": "snackroom.kni:127:7"
     },
     "option.pizza.7.1.2": {
         "type": "opt",
@@ -6281,7 +6341,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "RET",
-        "position": "snackroom.kni:127:7"
+        "position": "snackroom.kni:128:7"
     },
     "option.pizza.7.1.2.1": {
         "type": "text",
@@ -6289,7 +6349,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:127:7"
+        "position": "snackroom.kni:128:7"
     },
     "option.pizza.7.1.2.2": {
         "type": "call",
@@ -6331,7 +6391,7 @@ module.exports = module.exports = {
         ],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:127:7"
+        "position": "snackroom.kni:128:7"
     },
     "option.pizza.7.1.2.3": {
         "type": "move",
@@ -6369,7 +6429,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.pizza.7.1.2.4",
-        "position": "snackroom.kni:127:7"
+        "position": "snackroom.kni:128:7"
     },
     "option.pizza.7.1.2.4": {
         "type": "call",
@@ -6377,12 +6437,12 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:127:7"
+        "position": "snackroom.kni:128:7"
     },
     "option.pizza.7.2": {
         "type": "goto",
         "next": "RET",
-        "position": "snackroom.kni:128:3"
+        "position": "snackroom.kni:129:3"
     },
     "make.pizza": {
         "type": "def",
@@ -6392,7 +6452,7 @@ module.exports = module.exports = {
             "tp"
         ],
         "next": "make.pizza.1",
-        "position": "snackroom.kni:130:5"
+        "position": "snackroom.kni:131:5"
     },
     "make.pizza.1": {
         "type": "switch",
@@ -6428,7 +6488,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.1.1": {
         "type": "text",
@@ -6436,7 +6496,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "make.pizza.2",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.1.2": {
         "type": "text",
@@ -6444,7 +6504,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "make.pizza.2",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.1.3": {
         "type": "text",
@@ -6452,7 +6512,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "make.pizza.2",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.1.4": {
         "type": "text",
@@ -6460,7 +6520,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "make.pizza.2",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.2": {
         "type": "text",
@@ -6468,7 +6528,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "make.pizza.3",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.3": {
         "type": "switch",
@@ -6499,7 +6559,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.3.1": {
         "type": "text",
@@ -6507,7 +6567,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "make.pizza.4",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.3.2": {
         "type": "text",
@@ -6515,7 +6575,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "make.pizza.4",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.3.3": {
         "type": "text",
@@ -6523,7 +6583,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "make.pizza.4",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "make.pizza.4": {
         "type": "call",
@@ -6536,7 +6596,7 @@ module.exports = module.exports = {
         ],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:131:5"
+        "position": "snackroom.kni:132:5"
     },
     "topping": {
         "type": "def",
@@ -6544,7 +6604,7 @@ module.exports = module.exports = {
             "p"
         ],
         "next": "topping.1",
-        "position": "snackroom.kni:133:5"
+        "position": "snackroom.kni:134:5"
     },
     "topping.1": {
         "type": "switch",
@@ -6640,7 +6700,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:135:5"
+        "position": "snackroom.kni:136:5"
     },
     "topping.1.1": {
         "type": "text",
@@ -6648,7 +6708,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:136:5"
+        "position": "snackroom.kni:137:5"
     },
     "topping.1.2": {
         "type": "text",
@@ -6656,7 +6716,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:137:5"
+        "position": "snackroom.kni:138:5"
     },
     "topping.1.3": {
         "type": "text",
@@ -6664,7 +6724,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:138:5"
+        "position": "snackroom.kni:139:5"
     },
     "topping.1.4": {
         "type": "text",
@@ -6672,7 +6732,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:139:5"
+        "position": "snackroom.kni:140:5"
     },
     "topping.1.5": {
         "type": "text",
@@ -6680,7 +6740,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:140:5"
+        "position": "snackroom.kni:141:5"
     },
     "topping.1.6": {
         "type": "text",
@@ -6688,7 +6748,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:141:5"
+        "position": "snackroom.kni:142:5"
     },
     "topping.1.7": {
         "type": "text",
@@ -6696,7 +6756,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:142:5"
+        "position": "snackroom.kni:143:5"
     },
     "topping.1.8": {
         "type": "text",
@@ -6704,7 +6764,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:143:5"
+        "position": "snackroom.kni:144:5"
     },
     "topping.1.9": {
         "type": "text",
@@ -6712,7 +6772,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:144:5"
+        "position": "snackroom.kni:145:5"
     },
     "topping.1.10": {
         "type": "text",
@@ -6720,7 +6780,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:145:5"
+        "position": "snackroom.kni:146:5"
     },
     "topping.1.11": {
         "type": "text",
@@ -6728,7 +6788,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:146:5"
+        "position": "snackroom.kni:147:5"
     },
     "topping.1.12": {
         "type": "text",
@@ -6736,7 +6796,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:147:5"
+        "position": "snackroom.kni:148:5"
     },
     "topping.1.13": {
         "type": "text",
@@ -6744,7 +6804,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:148:5"
+        "position": "snackroom.kni:149:5"
     },
     "topping.1.14": {
         "type": "text",
@@ -6752,7 +6812,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:149:5"
+        "position": "snackroom.kni:150:5"
     },
     "topping.1.15": {
         "type": "text",
@@ -6760,7 +6820,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:150:5"
+        "position": "snackroom.kni:151:5"
     },
     "topping.1.16": {
         "type": "text",
@@ -6768,13 +6828,13 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:151:5"
+        "position": "snackroom.kni:152:5"
     },
     "eat.za": {
         "type": "def",
         "locals": [],
         "next": "eat.za.1",
-        "position": "snackroom.kni:153:5"
+        "position": "snackroom.kni:154:5"
     },
     "eat.za.1": {
         "type": "switch",
@@ -6815,7 +6875,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:155:5"
+        "position": "snackroom.kni:156:5"
     },
     "eat.za.1.1": {
         "type": "text",
@@ -6823,7 +6883,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:156:5"
+        "position": "snackroom.kni:157:5"
     },
     "eat.za.1.2": {
         "type": "text",
@@ -6831,7 +6891,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:157:5"
+        "position": "snackroom.kni:158:5"
     },
     "eat.za.1.3": {
         "type": "text",
@@ -6839,7 +6899,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:158:5"
+        "position": "snackroom.kni:159:5"
     },
     "eat.za.1.4": {
         "type": "text",
@@ -6847,7 +6907,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:159:5"
+        "position": "snackroom.kni:160:5"
     },
     "eat.za.1.5": {
         "type": "text",
@@ -6855,7 +6915,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:160:5"
+        "position": "snackroom.kni:161:5"
     },
     "option.dippindots": {
         "type": "def",
@@ -6863,7 +6923,7 @@ module.exports = module.exports = {
             "currency"
         ],
         "next": "option.dippindots.1",
-        "position": "snackroom.kni:163:3"
+        "position": "snackroom.kni:164:3"
     },
     "option.dippindots.1": {
         "type": "text",
@@ -6871,12 +6931,12 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.dippindots.2",
-        "position": "snackroom.kni:164:3"
+        "position": "snackroom.kni:165:3"
     },
     "option.dippindots.2": {
         "type": "par",
         "next": "option.dippindots.3",
-        "position": "snackroom.kni:164:3"
+        "position": "snackroom.kni:165:3"
     },
     "option.dippindots.3": {
         "type": "call",
@@ -6889,7 +6949,7 @@ module.exports = module.exports = {
         ],
         "next": "option.dippindots.4",
         "branch": "ESC",
-        "position": "snackroom.kni:165:3"
+        "position": "snackroom.kni:166:3"
     },
     "option.dippindots.4": {
         "type": "switch",
@@ -6923,7 +6983,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:166:3"
+        "position": "snackroom.kni:167:3"
     },
     "option.dippindots.4.1": {
         "type": "opt",
@@ -6938,7 +6998,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.dippindots.4.1.1",
-        "position": "snackroom.kni:167:7"
+        "position": "snackroom.kni:168:7"
     },
     "option.dippindots.4.1.0.1": {
         "type": "text",
@@ -6946,7 +7006,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:167:7"
+        "position": "snackroom.kni:168:7"
     },
     "option.dippindots.4.1.0.2": {
         "type": "text",
@@ -6954,7 +7014,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:167:7"
+        "position": "snackroom.kni:168:7"
     },
     "option.dippindots.4.1.0.3": {
         "type": "text",
@@ -6962,7 +7022,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:167:7"
+        "position": "snackroom.kni:168:7"
     },
     "option.dippindots.4.1.0.4": {
         "type": "move",
@@ -7000,7 +7060,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.dippindots.4.1.0.5",
-        "position": "snackroom.kni:167:7"
+        "position": "snackroom.kni:168:7"
     },
     "option.dippindots.4.1.0.5": {
         "type": "call",
@@ -7008,7 +7068,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:167:7"
+        "position": "snackroom.kni:168:7"
     },
     "option.dippindots.4.1.1": {
         "type": "opt",
@@ -7023,7 +7083,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.dippindots.4.1.2",
-        "position": "snackroom.kni:168:7"
+        "position": "snackroom.kni:169:7"
     },
     "option.dippindots.4.1.1.1": {
         "type": "text",
@@ -7031,7 +7091,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:168:7"
+        "position": "snackroom.kni:169:7"
     },
     "option.dippindots.4.1.1.2": {
         "type": "text",
@@ -7039,7 +7099,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:168:7"
+        "position": "snackroom.kni:169:7"
     },
     "option.dippindots.4.1.1.3": {
         "type": "text",
@@ -7047,7 +7107,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:168:7"
+        "position": "snackroom.kni:169:7"
     },
     "option.dippindots.4.1.1.4": {
         "type": "move",
@@ -7085,7 +7145,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.dippindots.4.1.1.5",
-        "position": "snackroom.kni:168:7"
+        "position": "snackroom.kni:169:7"
     },
     "option.dippindots.4.1.1.5": {
         "type": "call",
@@ -7093,7 +7153,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:168:7"
+        "position": "snackroom.kni:169:7"
     },
     "option.dippindots.4.1.2": {
         "type": "opt",
@@ -7108,7 +7168,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.dippindots.4.1.3",
-        "position": "snackroom.kni:169:7"
+        "position": "snackroom.kni:170:7"
     },
     "option.dippindots.4.1.2.1": {
         "type": "text",
@@ -7116,7 +7176,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:169:7"
+        "position": "snackroom.kni:170:7"
     },
     "option.dippindots.4.1.2.2": {
         "type": "text",
@@ -7124,7 +7184,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:169:7"
+        "position": "snackroom.kni:170:7"
     },
     "option.dippindots.4.1.2.3": {
         "type": "text",
@@ -7132,7 +7192,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:169:7"
+        "position": "snackroom.kni:170:7"
     },
     "option.dippindots.4.1.2.4": {
         "type": "move",
@@ -7170,7 +7230,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.dippindots.4.1.2.5",
-        "position": "snackroom.kni:169:7"
+        "position": "snackroom.kni:170:7"
     },
     "option.dippindots.4.1.2.5": {
         "type": "call",
@@ -7178,7 +7238,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:169:7"
+        "position": "snackroom.kni:170:7"
     },
     "option.dippindots.4.1.3": {
         "type": "opt",
@@ -7193,7 +7253,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.dippindots.4.1.4",
-        "position": "snackroom.kni:170:7"
+        "position": "snackroom.kni:171:7"
     },
     "option.dippindots.4.1.3.1": {
         "type": "text",
@@ -7201,7 +7261,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:170:7"
+        "position": "snackroom.kni:171:7"
     },
     "option.dippindots.4.1.3.2": {
         "type": "text",
@@ -7209,7 +7269,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:170:7"
+        "position": "snackroom.kni:171:7"
     },
     "option.dippindots.4.1.3.3": {
         "type": "text",
@@ -7217,7 +7277,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:170:7"
+        "position": "snackroom.kni:171:7"
     },
     "option.dippindots.4.1.3.4": {
         "type": "move",
@@ -7255,7 +7315,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.dippindots.4.1.3.5",
-        "position": "snackroom.kni:170:7"
+        "position": "snackroom.kni:171:7"
     },
     "option.dippindots.4.1.3.5": {
         "type": "call",
@@ -7263,7 +7323,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:170:7"
+        "position": "snackroom.kni:171:7"
     },
     "option.dippindots.4.1.4": {
         "type": "opt",
@@ -7278,7 +7338,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.dippindots.4.1.5",
-        "position": "snackroom.kni:171:7"
+        "position": "snackroom.kni:172:7"
     },
     "option.dippindots.4.1.4.1": {
         "type": "text",
@@ -7286,7 +7346,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:171:7"
+        "position": "snackroom.kni:172:7"
     },
     "option.dippindots.4.1.4.2": {
         "type": "text",
@@ -7294,7 +7354,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:171:7"
+        "position": "snackroom.kni:172:7"
     },
     "option.dippindots.4.1.4.3": {
         "type": "text",
@@ -7302,7 +7362,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:171:7"
+        "position": "snackroom.kni:172:7"
     },
     "option.dippindots.4.1.4.4": {
         "type": "move",
@@ -7340,7 +7400,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.dippindots.4.1.4.5",
-        "position": "snackroom.kni:171:7"
+        "position": "snackroom.kni:172:7"
     },
     "option.dippindots.4.1.4.5": {
         "type": "call",
@@ -7348,7 +7408,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:171:7"
+        "position": "snackroom.kni:172:7"
     },
     "option.dippindots.4.1.5": {
         "type": "opt",
@@ -7363,7 +7423,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "RET",
-        "position": "snackroom.kni:172:7"
+        "position": "snackroom.kni:173:7"
     },
     "option.dippindots.4.1.5.1": {
         "type": "text",
@@ -7371,7 +7431,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:172:7"
+        "position": "snackroom.kni:173:7"
     },
     "option.dippindots.4.1.5.2": {
         "type": "text",
@@ -7379,7 +7439,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:172:7"
+        "position": "snackroom.kni:173:7"
     },
     "option.dippindots.4.1.5.3": {
         "type": "text",
@@ -7387,7 +7447,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:172:7"
+        "position": "snackroom.kni:173:7"
     },
     "option.dippindots.4.1.5.4": {
         "type": "move",
@@ -7425,7 +7485,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.dippindots.4.1.5.5",
-        "position": "snackroom.kni:172:7"
+        "position": "snackroom.kni:173:7"
     },
     "option.dippindots.4.1.5.5": {
         "type": "call",
@@ -7433,18 +7493,18 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:172:7"
+        "position": "snackroom.kni:173:7"
     },
     "option.dippindots.4.2": {
         "type": "goto",
         "next": "RET",
-        "position": "snackroom.kni:173:3"
+        "position": "snackroom.kni:174:3"
     },
     "taste": {
         "type": "def",
         "locals": [],
         "next": "taste.1",
-        "position": "snackroom.kni:175:5"
+        "position": "snackroom.kni:176:5"
     },
     "taste.1": {
         "type": "switch",
@@ -7490,7 +7550,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:176:5"
+        "position": "snackroom.kni:177:5"
     },
     "taste.1.1": {
         "type": "text",
@@ -7498,7 +7558,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:176:5"
+        "position": "snackroom.kni:177:5"
     },
     "taste.1.2": {
         "type": "text",
@@ -7506,7 +7566,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:176:5"
+        "position": "snackroom.kni:177:5"
     },
     "taste.1.3": {
         "type": "text",
@@ -7514,7 +7574,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:176:5"
+        "position": "snackroom.kni:177:5"
     },
     "taste.1.4": {
         "type": "text",
@@ -7522,7 +7582,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:176:5"
+        "position": "snackroom.kni:177:5"
     },
     "taste.1.5": {
         "type": "text",
@@ -7530,7 +7590,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:176:5"
+        "position": "snackroom.kni:177:5"
     },
     "taste.1.6": {
         "type": "text",
@@ -7538,7 +7598,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:176:5"
+        "position": "snackroom.kni:177:5"
     },
     "option.healthy": {
         "type": "def",
@@ -7546,7 +7606,7 @@ module.exports = module.exports = {
             "currency"
         ],
         "next": "option.healthy.1",
-        "position": "snackroom.kni:178:3"
+        "position": "snackroom.kni:179:3"
     },
     "option.healthy.1": {
         "type": "text",
@@ -7554,7 +7614,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.healthy.2",
-        "position": "snackroom.kni:180:3"
+        "position": "snackroom.kni:181:3"
     },
     "option.healthy.2": {
         "type": "call",
@@ -7567,7 +7627,7 @@ module.exports = module.exports = {
         ],
         "next": "option.healthy.3",
         "branch": "ESC",
-        "position": "snackroom.kni:180:3"
+        "position": "snackroom.kni:181:3"
     },
     "option.healthy.3": {
         "type": "switch",
@@ -7601,7 +7661,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:181:3"
+        "position": "snackroom.kni:182:3"
     },
     "option.healthy.3.1": {
         "type": "opt",
@@ -7616,7 +7676,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.healthy.3.1.1",
-        "position": "snackroom.kni:182:7"
+        "position": "snackroom.kni:183:7"
     },
     "option.healthy.3.1.0.1": {
         "type": "text",
@@ -7624,7 +7684,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:182:7"
+        "position": "snackroom.kni:183:7"
     },
     "option.healthy.3.1.0.2": {
         "type": "text",
@@ -7632,7 +7692,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:182:7"
+        "position": "snackroom.kni:183:7"
     },
     "option.healthy.3.1.0.3": {
         "type": "text",
@@ -7640,7 +7700,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:182:7"
+        "position": "snackroom.kni:183:7"
     },
     "option.healthy.3.1.0.4": {
         "type": "move",
@@ -7678,7 +7738,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.healthy.3.1.0.5",
-        "position": "snackroom.kni:182:7"
+        "position": "snackroom.kni:183:7"
     },
     "option.healthy.3.1.0.5": {
         "type": "call",
@@ -7686,7 +7746,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:182:7"
+        "position": "snackroom.kni:183:7"
     },
     "option.healthy.3.1.1": {
         "type": "opt",
@@ -7701,7 +7761,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.healthy.3.1.2",
-        "position": "snackroom.kni:183:7"
+        "position": "snackroom.kni:184:7"
     },
     "option.healthy.3.1.1.1": {
         "type": "text",
@@ -7709,7 +7769,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:183:7"
+        "position": "snackroom.kni:184:7"
     },
     "option.healthy.3.1.1.2": {
         "type": "text",
@@ -7717,7 +7777,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:183:7"
+        "position": "snackroom.kni:184:7"
     },
     "option.healthy.3.1.1.3": {
         "type": "text",
@@ -7725,7 +7785,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:183:7"
+        "position": "snackroom.kni:184:7"
     },
     "option.healthy.3.1.1.4": {
         "type": "move",
@@ -7763,7 +7823,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.healthy.3.1.1.5",
-        "position": "snackroom.kni:183:7"
+        "position": "snackroom.kni:184:7"
     },
     "option.healthy.3.1.1.5": {
         "type": "call",
@@ -7771,7 +7831,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:183:7"
+        "position": "snackroom.kni:184:7"
     },
     "option.healthy.3.1.2": {
         "type": "opt",
@@ -7786,7 +7846,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.healthy.3.1.3",
-        "position": "snackroom.kni:184:7"
+        "position": "snackroom.kni:185:7"
     },
     "option.healthy.3.1.2.1": {
         "type": "text",
@@ -7794,7 +7854,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:184:7"
+        "position": "snackroom.kni:185:7"
     },
     "option.healthy.3.1.2.2": {
         "type": "text",
@@ -7802,7 +7862,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:184:7"
+        "position": "snackroom.kni:185:7"
     },
     "option.healthy.3.1.2.3": {
         "type": "text",
@@ -7810,7 +7870,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:184:7"
+        "position": "snackroom.kni:185:7"
     },
     "option.healthy.3.1.2.4": {
         "type": "move",
@@ -7848,7 +7908,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.healthy.3.1.2.5",
-        "position": "snackroom.kni:184:7"
+        "position": "snackroom.kni:185:7"
     },
     "option.healthy.3.1.2.5": {
         "type": "call",
@@ -7856,7 +7916,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:184:7"
+        "position": "snackroom.kni:185:7"
     },
     "option.healthy.3.1.3": {
         "type": "opt",
@@ -7871,7 +7931,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.healthy.3.1.4",
-        "position": "snackroom.kni:185:7"
+        "position": "snackroom.kni:186:7"
     },
     "option.healthy.3.1.3.1": {
         "type": "text",
@@ -7879,7 +7939,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:185:7"
+        "position": "snackroom.kni:186:7"
     },
     "option.healthy.3.1.3.2": {
         "type": "text",
@@ -7887,7 +7947,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:185:7"
+        "position": "snackroom.kni:186:7"
     },
     "option.healthy.3.1.3.3": {
         "type": "text",
@@ -7895,7 +7955,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:185:7"
+        "position": "snackroom.kni:186:7"
     },
     "option.healthy.3.1.3.4": {
         "type": "move",
@@ -7933,7 +7993,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.healthy.3.1.3.5",
-        "position": "snackroom.kni:185:7"
+        "position": "snackroom.kni:186:7"
     },
     "option.healthy.3.1.3.5": {
         "type": "call",
@@ -7941,7 +8001,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:185:7"
+        "position": "snackroom.kni:186:7"
     },
     "option.healthy.3.1.4": {
         "type": "opt",
@@ -7956,7 +8016,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.healthy.3.1.5",
-        "position": "snackroom.kni:186:7"
+        "position": "snackroom.kni:187:7"
     },
     "option.healthy.3.1.4.1": {
         "type": "text",
@@ -7964,7 +8024,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:186:7"
+        "position": "snackroom.kni:187:7"
     },
     "option.healthy.3.1.4.2": {
         "type": "text",
@@ -7972,7 +8032,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:186:7"
+        "position": "snackroom.kni:187:7"
     },
     "option.healthy.3.1.4.3": {
         "type": "text",
@@ -7980,7 +8040,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:186:7"
+        "position": "snackroom.kni:187:7"
     },
     "option.healthy.3.1.4.4": {
         "type": "move",
@@ -8018,7 +8078,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.healthy.3.1.4.5",
-        "position": "snackroom.kni:186:7"
+        "position": "snackroom.kni:187:7"
     },
     "option.healthy.3.1.4.5": {
         "type": "call",
@@ -8026,7 +8086,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:186:7"
+        "position": "snackroom.kni:187:7"
     },
     "option.healthy.3.1.5": {
         "type": "opt",
@@ -8041,7 +8101,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.healthy.3.1.6",
-        "position": "snackroom.kni:187:7"
+        "position": "snackroom.kni:188:7"
     },
     "option.healthy.3.1.5.1": {
         "type": "text",
@@ -8049,7 +8109,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:187:7"
+        "position": "snackroom.kni:188:7"
     },
     "option.healthy.3.1.5.2": {
         "type": "text",
@@ -8057,7 +8117,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:187:7"
+        "position": "snackroom.kni:188:7"
     },
     "option.healthy.3.1.5.3": {
         "type": "text",
@@ -8065,7 +8125,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:187:7"
+        "position": "snackroom.kni:188:7"
     },
     "option.healthy.3.1.5.4": {
         "type": "move",
@@ -8103,7 +8163,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.healthy.3.1.5.5",
-        "position": "snackroom.kni:187:7"
+        "position": "snackroom.kni:188:7"
     },
     "option.healthy.3.1.5.5": {
         "type": "call",
@@ -8111,7 +8171,7 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:187:7"
+        "position": "snackroom.kni:188:7"
     },
     "option.healthy.3.1.6": {
         "type": "opt",
@@ -8126,7 +8186,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "RET",
-        "position": "snackroom.kni:188:7"
+        "position": "snackroom.kni:189:7"
     },
     "option.healthy.3.1.6.1": {
         "type": "text",
@@ -8134,7 +8194,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:188:7"
+        "position": "snackroom.kni:189:7"
     },
     "option.healthy.3.1.6.2": {
         "type": "text",
@@ -8142,7 +8202,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:188:7"
+        "position": "snackroom.kni:189:7"
     },
     "option.healthy.3.1.6.3": {
         "type": "text",
@@ -8150,7 +8210,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:188:7"
+        "position": "snackroom.kni:189:7"
     },
     "option.healthy.3.1.6.4": {
         "type": "move",
@@ -8188,7 +8248,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.healthy.3.1.6.5",
-        "position": "snackroom.kni:188:7"
+        "position": "snackroom.kni:189:7"
     },
     "option.healthy.3.1.6.5": {
         "type": "call",
@@ -8196,18 +8256,18 @@ module.exports = module.exports = {
         "args": [],
         "next": "RET",
         "branch": "ESC",
-        "position": "snackroom.kni:188:7"
+        "position": "snackroom.kni:189:7"
     },
     "option.healthy.3.2": {
         "type": "goto",
         "next": "RET",
-        "position": "snackroom.kni:189:3"
+        "position": "snackroom.kni:190:3"
     },
     "eat": {
         "type": "def",
         "locals": [],
         "next": "eat.1",
-        "position": "snackroom.kni:191:5"
+        "position": "snackroom.kni:192:5"
     },
     "eat.1": {
         "type": "switch",
@@ -8253,7 +8313,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:193:5"
+        "position": "snackroom.kni:194:5"
     },
     "eat.1.1": {
         "type": "text",
@@ -8261,7 +8321,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:194:5"
+        "position": "snackroom.kni:195:5"
     },
     "eat.1.2": {
         "type": "text",
@@ -8269,7 +8329,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:195:5"
+        "position": "snackroom.kni:196:5"
     },
     "eat.1.3": {
         "type": "text",
@@ -8277,7 +8337,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:196:5"
+        "position": "snackroom.kni:197:5"
     },
     "eat.1.4": {
         "type": "text",
@@ -8285,7 +8345,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:197:5"
+        "position": "snackroom.kni:198:5"
     },
     "eat.1.5": {
         "type": "text",
@@ -8293,7 +8353,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:198:5"
+        "position": "snackroom.kni:199:5"
     },
     "eat.1.6": {
         "type": "text",
@@ -8301,7 +8361,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:199:5"
+        "position": "snackroom.kni:200:5"
     },
     "option.money": {
         "type": "def",
@@ -8309,7 +8369,7 @@ module.exports = module.exports = {
             "currency"
         ],
         "next": "option.money.1",
-        "position": "snackroom.kni:201:3"
+        "position": "snackroom.kni:202:3"
     },
     "option.money.1": {
         "type": "text",
@@ -8317,12 +8377,12 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.money.2",
-        "position": "snackroom.kni:202:3"
+        "position": "snackroom.kni:203:3"
     },
     "option.money.2": {
         "type": "par",
         "next": "option.money.3",
-        "position": "snackroom.kni:202:3"
+        "position": "snackroom.kni:203:3"
     },
     "option.money.3": {
         "type": "text",
@@ -8330,7 +8390,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.money.4",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.4": {
         "type": "switch",
@@ -8361,7 +8421,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.4.1": {
         "type": "text",
@@ -8369,7 +8429,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.5",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.4.2": {
         "type": "text",
@@ -8377,7 +8437,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.5",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.4.3": {
         "type": "text",
@@ -8385,7 +8445,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.5",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.5": {
         "type": "text",
@@ -8393,7 +8453,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.money.6",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.6": {
         "type": "echo",
@@ -8404,7 +8464,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.7",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.7": {
         "type": "text",
@@ -8412,7 +8472,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.money.8",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.8": {
         "type": "echo",
@@ -8423,7 +8483,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.9",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.9": {
         "type": "text",
@@ -8431,7 +8491,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.money.10",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.10": {
         "type": "echo",
@@ -8442,7 +8502,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.11",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.11": {
         "type": "text",
@@ -8450,12 +8510,12 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "option.money.12",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.12": {
         "type": "par",
         "next": "option.money.13",
-        "position": "snackroom.kni:203:3"
+        "position": "snackroom.kni:204:3"
     },
     "option.money.13": {
         "type": "switch",
@@ -8489,7 +8549,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:204:3"
+        "position": "snackroom.kni:205:3"
     },
     "option.money.13.1": {
         "type": "opt",
@@ -8504,7 +8564,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.money.13.1.1",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.1": {
         "type": "text",
@@ -8512,7 +8572,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.money.13.1.0.2",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.2": {
         "type": "switch",
@@ -8543,7 +8603,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.2.1": {
         "type": "text",
@@ -8551,7 +8611,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.0.3",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.2.2": {
         "type": "text",
@@ -8559,7 +8619,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.0.3",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.2.3": {
         "type": "text",
@@ -8567,7 +8627,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.0.3",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.3": {
         "type": "text",
@@ -8575,7 +8635,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.4": {
         "type": "text",
@@ -8583,7 +8643,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.5": {
         "type": "text",
@@ -8591,7 +8651,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.6": {
         "type": "move",
@@ -8629,7 +8689,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.money.13.1.0.7",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.0.7": {
         "type": "move",
@@ -8649,7 +8709,7 @@ module.exports = module.exports = {
             "currency.0"
         ],
         "next": "RET",
-        "position": "snackroom.kni:205:7"
+        "position": "snackroom.kni:206:7"
     },
     "option.money.13.1.1": {
         "type": "opt",
@@ -8664,7 +8724,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "option.money.13.1.2",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.1": {
         "type": "text",
@@ -8672,7 +8732,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.money.13.1.1.2",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.2": {
         "type": "switch",
@@ -8703,7 +8763,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.2.1": {
         "type": "text",
@@ -8711,7 +8771,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.1.3",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.2.2": {
         "type": "text",
@@ -8719,7 +8779,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.1.3",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.2.3": {
         "type": "text",
@@ -8727,7 +8787,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.1.3",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.3": {
         "type": "text",
@@ -8735,7 +8795,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.4": {
         "type": "text",
@@ -8743,7 +8803,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.5": {
         "type": "text",
@@ -8751,7 +8811,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.6": {
         "type": "move",
@@ -8789,7 +8849,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.money.13.1.1.7",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.1.7": {
         "type": "move",
@@ -8809,7 +8869,7 @@ module.exports = module.exports = {
             "currency.1"
         ],
         "next": "RET",
-        "position": "snackroom.kni:206:7"
+        "position": "snackroom.kni:207:7"
     },
     "option.money.13.1.2": {
         "type": "opt",
@@ -8824,7 +8884,7 @@ module.exports = module.exports = {
         ],
         "keywords": [],
         "next": "RET",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.1": {
         "type": "text",
@@ -8832,7 +8892,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": " ",
         "next": "option.money.13.1.2.2",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.2": {
         "type": "switch",
@@ -8863,7 +8923,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "RET",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.2.1": {
         "type": "text",
@@ -8871,7 +8931,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.2.3",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.2.2": {
         "type": "text",
@@ -8879,7 +8939,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.2.3",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.2.3": {
         "type": "text",
@@ -8887,7 +8947,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "option.money.13.1.2.3",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.3": {
         "type": "text",
@@ -8895,7 +8955,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": " ",
         "next": "RET",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.4": {
         "type": "text",
@@ -8903,7 +8963,7 @@ module.exports = module.exports = {
         "lift": "",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.5": {
         "type": "text",
@@ -8911,7 +8971,7 @@ module.exports = module.exports = {
         "lift": " ",
         "drop": "",
         "next": "RET",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.6": {
         "type": "move",
@@ -8949,7 +9009,7 @@ module.exports = module.exports = {
             ]
         ],
         "next": "option.money.13.1.2.7",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.1.2.7": {
         "type": "move",
@@ -8969,12 +9029,12 @@ module.exports = module.exports = {
             "currency.2"
         ],
         "next": "RET",
-        "position": "snackroom.kni:207:7"
+        "position": "snackroom.kni:208:7"
     },
     "option.money.13.2": {
         "type": "goto",
         "next": "RET",
-        "position": "snackroom.kni:208:3"
+        "position": "snackroom.kni:209:3"
     }
 }
 }],["template.js","kni","template.js",{"./engine":2,"./story.json":6,"./story":5,"./document":1},function (require, exports, module, __filename, __dirname){

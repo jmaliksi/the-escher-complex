@@ -66,7 +66,7 @@
   }
 
   - @coffee.flavor()
-    It has {~heavy |light ||} {~hints|notes} of {~forgotten memories|hazelnut|chocolate|caramel|doom|blood|night|sunshine|acidity|percolation|brimstone|velvet|leather}.
+    It has {~heavy |light ||} {~hints|notes} of {~forgotten memories|hazelnut|chocolate|caramel|doom|blood|night|sunshine|acidity|percolation|brimstone|velvet|leather|almonds}.
 
 - @option.fanta(currency)
   fanta. //
@@ -78,6 +78,7 @@
     + [You purchase a v[V]iolet Fanta.] -> fanta.flavor()
     + [You purchase a g[G]reen Fanta.] -> fanta.flavor()
     + [You purchase a y[Y]ellow Fanta.] -> fanta.flavor()
+    + [You purchase an i[I]ndigo Fanta.] -> fanta.flavor()
   }
 
   - @fanta.flavor()
