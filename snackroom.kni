@@ -1,0 +1,208 @@
+! currency.0 = 3
+! currency.1 = 3
+! currency.2 = 3
+
+- @...
+  You are in an empty breakroom.
+  Fluorescent light is drowned out by immaterial twilight.
+  Before you are uncountable vending machines.
+  + [You walk up to [Examine] a vending machine.] //->machine()
+  + [You c[C]heck your wallet.]
+    Inside you find {(currency.0)} gold dubloons, {(currency.1)} small gemstones, and {(currency.2)} quarters. //
+  + [You l[L]eave.] <-
+  >
+
+- @machine()
+  ! currency = ~3
+  You stand in front of a
+  -> color()
+  machine with
+  -> color()
+  {~ stripes| filligry| spikes| polka dots| detailing| lettering| robot arms}.
+  -> contents(currency) //
+#{(seen.machine)? You seem to have lost track of the last machine. |{!seen.machine}}
+  + [You walk up to [Examine] another vending machine.] ->machine
+  + [You s[S]tep away.] {?seen.machine} <-
+  >
+
+- @show.money(currency)
+  This machine takes {(currency)|gold dubloons|gemstones|quarters}. You have {(currency.{currency})} {(currency)| dubloons| gemstones| quarters}.
+
+- @color()
+  {~red|green|blue|black|yellow|gray|white|gold|purple|silver|chrome|glowing|rose gold|scarlet|amethyst|tourmaline}
+
+- @contents(currency)
+  {~Behind a {~short|tall|clean|polished} glass panel,
+    |On {~simple|colorful|digital} labels,
+    |{~Floating|Dancing|Arrayed} on an LCD screen,
+  }
+  you see options for {
+    ~ -> option.coffee(currency)
+    | -> option.pizza(currency)
+    | -> option.fanta(currency)
+    | -> option.bento(currency)
+    | -> option.money(currency)
+    | -> option.dippindots(currency)
+    | -> option.tea(currency)
+    | -> option.healthy(currency)
+  }
+
+- @option.coffee(currency)
+  coffee. //
+  ->show.money(currency)
+  {(currency.{currency})?
+    + [You purchase a d[D]ark roast.]
+      {-currency.{currency}} ->coffee.flavor()
+    + [You purchase a m[M]edium roast.]
+      {-currency.{currency}} ->coffee.flavor()
+    + [You purchase a l[L]ight roast.]
+      {-currency.{currency}} ->coffee.flavor()
+    + [You purchase a l[L]atte.]
+      {-currency.{currency}}
+      The warm milk lulls you into a {~false|} sense of security.
+    + [You purchase a h[H]ot cocoa.]
+      {-currency.{currency}}
+      It's {~rather|too|pleasantly|not too} sweet.
+  }
+
+  - @coffee.flavor()
+    It has {~heavy|light||} {~hints|notes} of {~forgotten memories|hazelnut|chocolate|caramel|doom|blood|night|sunshine|acidity|percolation|brimstone|velvet|leather}
+
+- @option.fanta(currency)
+  fanta. //
+  ->show.money(currency)
+  {(currency.{currency})?
+    + [You purchase a r[R]ed Fanta.] -> fanta.flavor()
+    + [You purchase an o[O]range Fanta.] -> fanta.flavor()
+    + [You purchase a b[B]lue Fanta.] -> fanta.flavor()
+    + [You purchase a v[V]iolet Fanta.] -> fanta.flavor()
+    + [You purchase a g[G]reen Fanta.] -> fanta.flavor()
+    + [You purchase a y[Y]ellow Fanta.] -> fanta.flavor()
+  }
+
+  - @fanta.flavor()
+    {-currency.{currency}}
+    It tastes like ->color().
+
+- @option.bento(currency)
+  ! bento.seed = ~10000
+  bento boxes. //
+  ->show.money(currency)
+  {(currency.{currency})?
+    + [You pick the b[B]ento with ->ulam(bento.seed + 1) and ->ulam(bento.seed + 2).] ->flavor()
+    + [You pick the b[B]ento with ->ulam(bento.seed + 3) and ->ulam(bento.seed + 4).] ->flavor()
+    + [You pick the b[B]ento with ->ulam(bento.seed + 5) and ->ulam(bento.seed + 6).] ->flavor()
+  }
+
+  - @ulam(n)
+    {#n|shrimp tempura|vegetable tempura|beef teriyaki|chicken teriyaki|salmon teriyaki|chicken katsu|pork katsu|california rolls|salad|takoyaki|grilled mackerel|grilled salmon|tamago|gorditas|pickles|sashimi|seared tuna|miso salmon|natto|hijiki|gyoza|croquettes|noodles}
+
+  - @flavor()
+    {-currency.{currency}}
+    It's {~light|heavy|hearty|filling} and delicious.
+
+- @option.tea(currency)
+  tea. //
+  ->show.money(currency)
+  {(currency.{currency})?
+    + [You purchase a cup of c[C]hamomile.] {-currency.{currency}} You feel calm.
+    + [You purchase a cup of e[E]arl grey.] {-currency.{currency}} You feel awake.
+    + [You purchase a cup of g[G]reen tea.] {-currency.{currency}} You feel focused.
+    + [You purchase a cup of o[O]olong.] {-currency.{currency}} You feel alert.
+    + [You purchase a cup of r[R]ooibos.] {-currency.{currency}} You feel peaceful.
+    + [You purchase a cup of m[M]atcha.] {-currency.{currency}} You feel jazzed.
+    + [You purchase a cup of g[G]inger.] {-currency.{currency}} Your tummy feels great.
+    + [You purchase a cup of p[P]u-erh.] {-currency.{currency}} You feel sharp.
+  }
+
+- @option.pizza(currency)
+  ! seed.sauce = ~999
+  ! seed.style = ~999
+  ! seed.topping = ~10000
+  pizza. //
+  ->show.money(currency)
+  {(currency.{currency})?
+    + [You order a personal []->make.pizza(seed.sauce, seed.style, seed.topping)] {-currency.{currency}} ->eat()
+    + [You order a personal []->make.pizza(seed.sauce + 1, seed.style + 1, seed.topping + 1)] {-currency.{currency}} ->eat()
+    + [You order a personal []->make.pizza(seed.sauce + 2, seed.style + 2, seed.topping + 2)] {-currency.{currency}} ->eat()
+  }
+
+  - @make.pizza(sc, st, tp)
+    {#sc|Detroit|Chicago|New York} style pizza with {#st|red sauce|white sauce|pesto} ->topping(tp)
+
+  - @topping(p)
+    {#p
+    |.
+    |, topped with pepperoni.
+    |, topped with anchovies.
+    |, topped with mushrooms.
+    |, topped with olives.
+    |, topped with garlic.
+    |, topped with onions.
+    |, topped with bbq chicken.
+    |, topped with extra cheese.
+    |, topped with sausage.
+    |, topped with fresh basil.
+    |, topped with something red.
+    |, topped with lies.
+    |, topped with eggs.
+    |, topped with pineapple.
+    |, topped with beans.
+    }
+
+  - @eat()
+    {
+    ~It's fine.
+    |You burn the roof of your mouth.
+    |This is the singular best pizza you've ever had.
+    |Tasty!
+    |Your favorite!
+    }
+
+
+- @option.dippindots(currency)
+  dippin' dots. //
+  ->show.money(currency)
+  {(currency.{currency})?
+    + [You get c[C]ookies n cream.] {-currency.{currency}} ->taste()
+    + [You get b[B]anana split.] {-currency.{currency}} ->taste()
+    + [You get b[B]irthday cake.] {-currency.{currency}} ->taste()
+    + [You get b[B]ubble gum.] {-currency.{currency}} ->taste()
+    + [You get c[C]hocolate.] {-currency.{currency}} ->taste()
+    + [You get c[C]ool mint crunch.] {-currency.{currency}} ->taste()
+  }
+
+  - @taste()
+    {~Delicious!|Out of this world!|You feel like you're in the future.|Zetus Lepetus!|Your brain freezes.|It's fine.}
+
+- @option.healthy(currency)
+  various snacks.
+  ->show.money(currency)
+  {(currency.{currency})?
+    + [You get the g[G]ranola bar. ] {-currency.{currency}} ->eat()
+    + [You get the t[T]rail mix. ] {-currency.{currency}} ->eat()
+    + [You get the f[F]reeze dried berries. ] {-currency.{currency}} ->eat()
+    + [You get the k[K]ale chips. ] {-currency.{currency}} ->eat()
+    + [You get the r[R]ice puffs. ] {-currency.{currency}} ->eat()
+    + [You get the p[P]armesan crisps. ] {-currency.{currency}} ->eat()
+    + [You get the c[C]hia pudding. ] {-currency.{currency}} ->eat()
+  }
+
+  - @eat()
+    {
+    ~Cronch.
+    |You feel healthy.
+    |You feel great.
+    |You feel like a bird.
+    |Cromch.
+    |Yum?
+    }
+
+- @option.money(currency)
+  synthesizing currency. //
+  This machine takes {(currency)|gold dubloons|gemstones|quarters}. You have {(currency.0)} gold dubloons, {(currency.1)} small gemstones, and {(currency.2)} quarters. //
+  {(currency.{currency})?
+    + [You insert one (1) {(currency)|dubloon|gemstone|quarter} and recieve [Synthesize] three (3) gold dubloons.] {-currency.{currency}} {+3 currency.0}
+    + [You insert one (1) {(currency)|dubloon|gemstone|quarter} and recieve [Synthesize] three (3) gemstones.] {-currency.{currency}} {+3 currency.1}
+    + [You insert one (1) {(currency)|dubloon|gemstone|quarter} and recieve [Synthesize] three (3) quarters.] {-currency.{currency}} {+3 currency.2}
+  }
