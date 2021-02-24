@@ -3,6 +3,25 @@
     <head>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=0.75">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/svg" href="static/vending-machine.svg"/>
+
+        <title>The Escher Complex</title>
+        <meta name="description" content="Welcome to the Escher Complex">
+        <meta name="robots" content="index,nofollow">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://jmaliksi.github.io/the-escher-complex">
+        <meta property="og:title" content="The Escher Complex">
+        <meta property="og:description" content="Welcome to the Escher Complex">
+        <meta property="og:image" content="static/intro.png"/>
+        <meta property="og:image:secure" content="static/intro.png"/>
+
+        <meta name="twitter:title" content="The Escher Complex">
+        <meta name="twitter:description" content="Welcome to the Escher Complex">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="static/intro.png">
 
         <style>
             @media handheld {
@@ -12,14 +31,11 @@
             }
 
             body {
-                font-size: 200%;
-                background-color: 
-hsla(60, 42.00%, 66.00%, 1)
-;
-                color: 
-hsla(240, 42.00%, 25.00%, 1)
-;
+                font-size: 150%;
+                background-image: radial-gradient(black 65%, #770077);
+                color: white;
                 overflow: none;
+                font-family: 'Lora', serif;
             }
 
             .body {
@@ -66,6 +82,15 @@ hsla(240, 42.00%, 25.00%, 1)
                 text-align: justify;
             }
 
+            .kni-body p {
+                background-color: black;
+            }
+
+            tr {
+                background-color: black;
+                width: 100%;
+            }
+
             th {
                 vertical-align: top;
                 padding-right: 1ex;
@@ -82,7 +107,7 @@ hsla(240, 42.00%, 25.00%, 1)
 
             a {
                 color: inherit;
-                font-family: 200%;
+                font-size: 75%;
             }
 
             a:link {
@@ -101,13 +126,17 @@ hsla(240, 42.00%, 25.00%, 1)
                 position: absolute;
                 height: 1em;
                 bottom: 0;
-                left: 0;
+                right: 0;
                 margin: 10px;
+                z-index: 1;
             }
         </style>
     </head>
     <body>
-        <div class="reset"><a href="#">reset</a></div>
+        <div class="reset">
+            <a href="#">reset</a>
+            <a href="https://github.com/jmaliksi/the-escher-complex/">github</a>
+        </div>
         <script><!--
 // @generated
 /*eslint semi:[0], no-native-reassign:[0]*/
